@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+.venv/
+
+# FastAPI uploads
+*.pdf
+uploads/
+
+# Node
+node_modules/
+dist/
+build/
+
+# System
+.DS_Store
+*.log
+
+# VSCode
+.vscode/
