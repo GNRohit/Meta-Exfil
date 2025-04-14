@@ -64,7 +64,7 @@ const FileUpload = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post("http://127.0.0.1:8000/upload/", formData, {
+            const response = await axios.post("https://meta-exfil.onrender.com/upload/", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
                 responseType: 'blob',
                 timeout: 30000 //longer timeout for larger files
