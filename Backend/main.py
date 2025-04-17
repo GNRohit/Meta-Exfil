@@ -100,7 +100,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://meta-exfil.vercel.app",
-        "https://meta-exfil-git-main-your-username.vercel.app",  # Add any preview deployments
+        "https://meta-exfil-git-main-rohit-gns-projects.vercel.app",  # Add any preview deployments
         "https://*.vercel.app",  # Allow all Vercel subdomains
         "http://localhost:3000",  # For local development
         "http://localhost:5173"
