@@ -98,10 +98,18 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://meta-exfil.vercel.app"],  # Change "*" to specific domain in production
+    allow_origins=[
+        "https://meta-exfil.vercel.app",
+        "https://meta-exfil-git-main-your-username.vercel.app",  # Add any preview deployments
+        "https://*.vercel.app",  # Allow all Vercel subdomains
+        "http://localhost:3000",  # For local development
+        "http://127.0.0.1:8000"  # For local development
+        "http://localhost:5173"
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],  # Explicitly list methods
     allow_headers=["*"],
+    max_age=86400,  # Cache preflight requests for 24 hours
 )
 
 def sanitize_filename(filename):
