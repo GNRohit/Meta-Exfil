@@ -1,7 +1,12 @@
 #!/bin/bash
-# Install system dependencies (ExifTool + FFmpeg)
-sudo apt-get update
-sudo apt-get install -y exiftool ffmpeg
+# Install FFmpeg (static build)
+wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+tar -xf ffmpeg-release-amd64-static.tar.xz
+mv ffmpeg-*-amd64-static/ffmpeg /usr/local/bin/
 
-# Install Python dependencies
-pip install -r requirements.txt
+# Install ExifTool (Perl script)
+wget https://exiftool.org/Image-ExifTool-12.67.tar.gz
+tar -xf Image-ExifTool-12.67.tar.gz
+cd Image-ExifTool-12.67
+perl Makefile.PL
+make install
