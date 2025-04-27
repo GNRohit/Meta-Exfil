@@ -162,7 +162,7 @@ const FileUpload = () => {
     const checkBackendStatus = async () => {
         setBackendStatus("checking");
         try {
-            const response = await axios.get(`${API_URL}/`, {
+            const response = await axios.get(`${API_URL}`, {
                 timeout: 10000
             });
             if (response.status === 200) {
@@ -187,7 +187,7 @@ const FileUpload = () => {
         // Make multiple attempts to wake the server
         for (let i = 0; i < 6; i++) {
             try {
-                const response = await axios.get(`${API_URL}/`, {
+                const response = await axios.get(`${API_URL}`, {
                     timeout: 10000
                 });
                 if (response.status === 200) {
