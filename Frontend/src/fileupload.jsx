@@ -152,7 +152,7 @@ const FileUpload = () => {
     const [backendStatus, setBackendStatus] = useState("checking");
     const [uploadProgress, setUploadProgress] = useState(0);
 
-    const API_URL = "https://meta-exfil.onrender.com";
+    const API_URL = import.meta.env.VITE_API_URL;
 
     // Check backend status when component mounts
     useEffect(() => {
