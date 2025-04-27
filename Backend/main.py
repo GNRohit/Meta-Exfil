@@ -98,15 +98,9 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://meta-exfil.vercel.app",
-        "https://meta-exfil-git-main-rohit-gns-projects.vercel.app",  # Add any preview deployments
-
-        # "http://localhost:5173",
-        # "http://127.0.0.1:8000"
-    ],
+    allow_origins=["https://meta-exfil.vercel.app"],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],  # Explicitly list methods
+    allow_methods=["*"],  # Explicitly list methods
     allow_headers=["*"],
     max_age=86400,  # Cache preflight requests for 24 hours
 )
