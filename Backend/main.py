@@ -101,10 +101,9 @@ app.add_middleware(
     allow_origins=[
         "https://meta-exfil.vercel.app",
         "https://meta-exfil-git-main-rohit-gns-projects.vercel.app",  # Add any preview deployments
-        "https://*.vercel.app",  # Allow all Vercel subdomains
-        "http://localhost:3000",  # For local development
-        "http://localhost:5173",
-        "http://127.0.0.1:8000"
+
+        # "http://localhost:5173",
+        # "http://127.0.0.1:8000"
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS"],  # Explicitly list methods
